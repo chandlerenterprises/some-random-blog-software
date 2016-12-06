@@ -5,17 +5,20 @@
 */
 
 module.exports = function(res, searchFor, type, handleErr) {
+  var cached;
   var keys;
   var category;
 
   if(type == 'blogPost') {
     category = searchFor.category;
-    keys = Object.keys(global.blogPosts[category]);
+    cached = global.blogPosts[category];
     searchFor = searchFor.title;
   } else {
     category = searchFor.category;
-    keys = Object.keys(global.blogPosts[category]);
+    cached = global.blogPosts;
   }
+
+  keys = Object.keys(cached);
 
   var error = {}
   var exists;
