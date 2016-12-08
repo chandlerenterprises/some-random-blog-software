@@ -40,9 +40,12 @@ module.exports = function(req, res) {
         }
         
         matches[titles[i]] = post;
+      }
+    /* by date   
+      if(post[postKeys[a]] >= data.date.from && post[postKeys[a]] <= data.date.to) {
         
       }
-      
+    */      
     }
 
   }
@@ -51,7 +54,7 @@ module.exports = function(req, res) {
     sort: 'ascending/descending',
     keyword: 'anything',
     category: 'a cat',
-    dayPosted: 'a month, day or year => 2016'
+    date: 'a month, day or year => 2016'
   }
 
 }
