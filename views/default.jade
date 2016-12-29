@@ -1,0 +1,14 @@
+include ./head.jade
+script(src='/javascripts/blog.js')
+
+body
+    #nav
+        .left
+            h2 some random blog site
+        .right
+            if(!authenticated)
+                a(href="/auth/signin").signin signin
+            else
+                i.fa.fa-plus.openModal
+                .signout
+                    a(href="/auth/signout") signout

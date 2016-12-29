@@ -1,0 +1,14 @@
+include ./head.jade
+include ./default.jade
+
+.modal
+    #post
+        i.fa.fa-close.closeModal
+        input(placeholder="title").title
+        input(placeholder="body").body
+        input(placeholder="category").category
+        button post
+    #cat
+        input(placeholder="category").category
+        button new cat
+h1.posts

@@ -1,0 +1,13 @@
+include ./head.jade
+script(src='/javascripts/auth.js')
+script.
+    var adminSetup = #{adminSetup}
+
+body
+    if adminSetup
+        h1 blog already set up
+    else
+        h1 set up admin account
+        input(placeholder='username').username
+        input(placeholder='password').password
+        button
